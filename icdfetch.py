@@ -13,8 +13,9 @@ payload = {
 token = requests.post(token_endpoint, data=payload).json()['access_token']
 
 # Correct search endpoint
-query= "malabsorption"
+query= "fever"
 uri = (f"https://id.who.int/icd/release/11/2024-01/mms/search?q={query}")
+# uri = (f"https://id.who.int/icd/release/11/2024-01/mms/search?q=kalliral&linearization=tm2")
 
 headers = {
     'Authorization': f'Bearer {token}',
